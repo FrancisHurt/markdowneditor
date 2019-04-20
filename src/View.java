@@ -5,20 +5,28 @@ import java.awt.*;
 
 public class View extends JFrame{
 
+    public JLabel label;
+    public JButton button;
+    public JTextField textfield;
 
+    public void guiStart() {
+        // creating basic JFrame options
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+        setSize(200,200);
+        setTitle("Markdown Editor");
 
-    public View(){
+        // setting up layou
+        setLayout(new FlowLayout());
 
-        Editor editor = new Editor();
-        editor.editorStart();
+        // generating content
+        label = new JLabel("What's up Label");
+        textfield = new JTextField(15);
+        button = new JButton("Button");
 
-    }
-
-    public static void main(String args[]) {
-        View gui = new View();
-        gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        gui.setSize(200, 200);
-        gui.setVisible(true);
-        gui.setTitle("Frank's Markdown Editor");
+        // adding to JFrame
+        add(label);
+        add(textfield);
+        add(button);
     }
 }

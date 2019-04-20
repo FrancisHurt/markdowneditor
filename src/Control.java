@@ -1,4 +1,4 @@
 package markdowneditor;
 
-public class Previewer {
+public class Control {
 }
